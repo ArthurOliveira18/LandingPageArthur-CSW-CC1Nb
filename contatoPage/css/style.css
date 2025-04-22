@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #f5f7fa;
+}
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+    background-color: #cad3db;
+
+
+}
+
+.myImg img {
+    margin-top: 1rem;
+    border-radius: 8rem;
+    height: 7rem;
+    width: 7rem;
+    margin-bottom: 1rem;
+}
+
+.ulPages ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    font-size: 20px;
+}
+
+.ulPages ul li {
+    position: relative;
+}
+
+.ulPages ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /* Aqui é onde começa a listra do lado de cima que é na posição zero, se fosse "top", ele iniciaria do lado de cima */
+
+    left: 0;
+    /* Aqui é onde começa a listra do lado esquerdo que é na posição zero, se fosse "right", ele iniciaria do lado direito */
+
+    width: 0;
+    /* Aqui é onde começa a listra, no caso na posição zero */
+
+    height: 2px;
+    /* Altura da listra */
+
+    background-color: #000;
+    /* Cor da listra */
+
+    transition: width 0.3s ease;
+    /* Animação suave */
+}
+
+.ulPages ul li:hover::after {
+    width: 100%;
+    /* Listra se expande para a largura total */
+}
+
+.iconBG img {
+    width: 3rem;
+}
+
+main {
+    max-width: 1000px;
+    width: 80%;
+    min-width: 350px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.37);
+    margin-bottom: 2rem;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid #0000003f;
+}
+
+.dark-mode {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode main {
+    background-color: #333;
+}
+
+.dark-mode a {
+    color: #f5f7fa;
+}
+
+.dark-mode hr{
+    border: 0;
+    border-top: 1px solid #ffffff6e;
+}
+
+
+
+
+
+main p {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.dark-mode main p {
+    color: #aaa;
+}
+
+
+/* Adicione isso ao seu arquivo CSS existente */
+
+main h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dark-mode main h1 {
+    color: #f5f7fa;
+}
+
+form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+.dark-mode label {
+    color: #f5f7fa;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="tel"],
+.dark-mode input[type="email"],
+.dark-mode select,
+.dark-mode textarea {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #f5f7fa;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.btn-reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #c82333;
+}
+
+.dark-mode .btn-submit,
+.dark-mode .btn-reset {
+    color: white;
+}
+
+@media (max-width: 580px) {
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}

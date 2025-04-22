@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="myImg">
+            <img src="img/Foto minha profissional .jpeg" alt="Foto minha profissional">
+        </div>
+
+        <div class="ulPages">
+            <ul>
+                <li><a href="../curriculoPage/curriculo.html">Curriculo </a></li>
+                <li><a href="../githubPage/github.html"> GitHub </a></li>
+                <li> <a href="../index.html">Home</a></li>
+                <li><a href="../servicoPage/servico.html">Serviços</a></li>
+            </ul>
+        </div>
+
+        <div class="iconBG" id="iconBG">
+            <img src="icons/luaPreta.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <h1>Formulário de Contato para Serviços</h1>
+        
+        <form id="servicoForm">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+            </div>
+            
+            <div class="form-group">
+                <label>Tipo de Cliente:</label>
+                <div class="radio-group">
+                    <input type="radio" id="pessoaFisica" name="tipoCliente" value="Pessoa Física" checked>
+                    <label for="pessoaFisica">Pessoa Física</label>
+                    
+                    <input type="radio" id="pessoaJuridica" name="tipoCliente" value="Pessoa Jurídica">
+                    <label for="pessoaJuridica">Pessoa Jurídica</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="horario">Melhor horário para contato:</label>
+                <select id="horario" name="horario" required>
+                    <option value="" disabled selected>Selecione um horário</option>
+                    <option value="manha">Manhã (8h-12h)</option>
+                    <option value="tarde">Tarde (13h-18h)</option>
+                    <option value="noite">Noite (18h-22h)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Tipo de Serviço Desejado:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="siteEstatico" name="servico" value="Site Estático (R$ 150)">
+                    <label for="siteEstatico">Site Estático (R$ 150)</label><br>
+                    
+                    <input type="checkbox" id="siteInterativo" name="servico" value="Site Interativo (R$ 350)">
+                    <label for="siteInterativo">Site Interativo (R$ 350)</label><br>
+                    
+                    <input type="checkbox" id="outroServico" name="servico" value="Outro">
+                    <label for="outroServico">Outro (especifique abaixo)</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="descricao">Descrição do Projeto:</label>
+                <textarea id="descricao" name="descricao" rows="5" required placeholder="Descreva brevemente o que você precisa..."></textarea>
+            </div>
+            
+            
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+                <button type="reset" class="btn-reset">Limpar Formulário</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+<script src="script.js"></script>
+</html>
