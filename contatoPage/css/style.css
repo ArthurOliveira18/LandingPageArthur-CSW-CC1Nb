@@ -281,4 +281,14 @@ button {
     button {
         width: 100%;
     }
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main{
+        max-width: 300px;
+        min-width: 100px;
+    }
 }
